@@ -173,11 +173,11 @@
             this.next_butten_form_02.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.next_butten_form_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.next_butten_form_02.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.next_butten_form_02.Location = new System.Drawing.Point(1170, 673);
+            this.next_butten_form_02.Location = new System.Drawing.Point(1147, 673);
             this.next_butten_form_02.Name = "next_butten_form_02";
-            this.next_butten_form_02.Size = new System.Drawing.Size(144, 31);
+            this.next_butten_form_02.Size = new System.Drawing.Size(167, 31);
             this.next_butten_form_02.TabIndex = 2;
-            this.next_butten_form_02.Text = "N E X T";
+            this.next_butten_form_02.Text = "R E G I S T E R";
             this.next_butten_form_02.UseVisualStyleBackColor = false;
             this.next_butten_form_02.Click += new System.EventHandler(this.next_butten_form_02_Click);
             // 

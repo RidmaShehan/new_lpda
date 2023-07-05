@@ -8,22 +8,24 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;//  <---- use SQL CLIENT.
 
 namespace LPDA
 {
     public partial class Form1 : Form
     {
-        // ....Create an instance of the new form....
-        dashboard_form dashboard_form = new dashboard_form();
+        
+        dashboard_form dashboard_form = new dashboard_form();//  <----Create an instance of the new form....
 
 
         // ....Create an instance of the new form....
         create_account_form create_account_form = new create_account_form();
 
         
-
-        public string user_name_login;
-        public string password_login;
+        //....Create an public variable....
+           
+        public string user_name_login;//  <----variable for Login User Name...
+        public string password_login;//  <----variable for Login Password...
         public Form1()
         {
             InitializeComponent();
@@ -38,8 +40,12 @@ namespace LPDA
 
         private void user_name_text_box_KeyDown(object sender, KeyEventArgs e)
         {
-            user_name_login = user_name_text_box.Text;
-            password_txet_box.Focus();
+           
+            if (e.KeyCode == Keys.Enter)    //  <---- Make a KeyDown Key Event for press ENTER Key.
+            {
+                user_name_login = user_name_text_box.Text;// <----If User enter the USER NAME, it will assign to the "user_name_login".
+                password_txet_box.Focus();//  <----Then FOCUS the "password_text_box"-Txetboc for ENTER PASSWORD.
+            }
             /*if (e.KeyCode == Keys.Enter)
             {
                 
@@ -91,9 +97,11 @@ namespace LPDA
 
         private void password_txet_box_KeyDown(object sender, KeyEventArgs e)
         {
-            password_login = password_txet_box.Text;
-            login_butten.Focus();
-            
+            if (e.KeyCode == Keys.Enter) //  <---- Make a KeyDown Key Event for press ENTER Key.
+            {
+                password_login = password_txet_box.Text;//  <----If User enter the PASSWORD, it will assign to the "password_login".
+                login_butten.Focus();//  <---- Then focus the LOGIN BUTTEN for login.
+            }
             /* if (e.KeyCode == Keys.Enter)
              {
                  string password_login = password_txet_box.Text;
@@ -124,41 +132,62 @@ namespace LPDA
              }*/
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)//  <---- Make a Click Event for lable named as CREATE ACCOUNT,  for register the new customer.
         {
+            
+
             // Create an instance of the new form
-            create_account_form create_account_form = new create_account_form();
+            create_account_form create_account_form = new create_account_form(); //  <----Call the CREAT ACCOUNT FORM for this form like Objeect.
 
             // Hide the current form
-            this.Hide();
+            this.Hide();//  <---- HIDE current form.
 
             // Show the new form
-            create_account_form.Show();
+            create_account_form.Show();//  <---- Show the CREAT ACCOUNT FORM.
         }
 
         private void login_butten_Click(object sender, EventArgs e)
         {
+            string query = "SELECT lawer_password FROM lawer_data_table WHERE lawer_user_name = '" +user_name_text_box.Text + "';";
+            string password = string.Empty;//  <---- Make a variable as PASSWORD for assign password readed in QUERY -->lpda-Database -->lawer_data_table-Data Table -->lawer_password-Data Colum
 
-            Boolean UserNameAndPasswordIsCorrect = false;   
-            while(UserNameAndPasswordIsCorrect=!true)
+            using (SqlDataReader reader = SQL.ExecuteReader(query))
             {
-                if(user_name_login == "ridma" && password_login == "admin")
+                if (reader.Read())
                 {
-                    password_erroe_picture.Visible = false;
-                    user_name_error_picture.Visible = false;
-                    password_correct_picture.Visible = true;
-                    user_name_correct_picture.Visible = true;
-                    UserNameAndPasswordIsCorrect =true;
-                    this.Hide();
-                    dashboard_form.Show();
-                    break;
+                    password = reader["lawer_password"].ToString();
                 }
+            }
+            
+            Boolean UserNameAndPasswordIsCorrect = false;
+            
+            if (password_txet_box.Text == password)//  <---- Check if USER Entered password is correct.
+            {
+                password_erroe_picture.Visible = false; 
+                user_name_error_picture.Visible = false;
+                password_correct_picture.Visible = true;  
+                user_name_correct_picture.Visible = true; 
+                UserNameAndPasswordIsCorrect = true;
+                this.Hide();    //  <---- If USER NAME & PASSWORD are correct then hide this form.
+                dashboard_form.Show();//  <---- Then show DASHBORD FORM.
+            }
+            else//  <----if USER Entered password is incorrect.
+            {
+                password_erroe_picture.Visible = true;//  <---- PASSWORD error
+                user_name_error_picture.Visible=true;//  <---- USER NAME error
+                password_correct_picture.Visible = false;
+                password_correct_picture.Visible = false;
+                MessageBox.Show("Incorrect User Name Or Password!");
+                user_name_text_box.Clear();//  <---- Clear the user_name_text_box
+                password_txet_box.Clear();//  <---- Clear the password_text_box
+                user_name_text_box.Focus();//  <---- Focus the user_name_text_box for enter the new password.
+                
             }
         }
 
         private void login_butten_MouseHover(object sender, EventArgs e)
         {
-            hover_login_botten.Visible = true;
+            
         }
     }
 }

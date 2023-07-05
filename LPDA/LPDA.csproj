@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LRegDate.cs" />
+    <Compile Include="SQL.cs" />
     <Compile Include="create_account_form.cs">
       <SubType>Form</SubType>
     </Compile>

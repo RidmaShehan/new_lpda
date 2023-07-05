@@ -16,24 +16,18 @@ namespace LPDA
 {
     public partial class create_account_form_02 : Form
     {
+        private LRegDate data;
+
         // Create an instance of the create_account_form_02
         create_account_form create_account_form = new create_account_form();
-
-        public string Email;
-        public string PhoneNumber;
-        public string UserName;
-        public string Password;
-        public string ZipCode;
-        public string TempPassword;
-
-        public create_account_form_02()
+        public create_account_form_02(LRegDate data)
         {
             InitializeComponent();
+            this.data = data;
         }
       
         private void next_butten_form_02_Click(object sender, EventArgs e)
         {
-
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "reg(*.txt)|*.txt";
             saveFileDialog.Title = "save Registration Data";
@@ -45,19 +39,19 @@ namespace LPDA
                 {
                     // Write the registration data to the file
                     
-                    writer.WriteLine($"Surname: {create_account_form.Surname}");
-                    writer.WriteLine($"First Name: {create_account_form.FirstName}");
-                    writer.WriteLine($"Second Name: {create_account_form.SecondName}");
-                    writer.WriteLine($"ID Number: {create_account_form.IDNumber}");
-                    writer.WriteLine($"Date Of Birth : {create_account_form.DateOfBirth}");
-                    writer.WriteLine($"Gender : {create_account_form.Gender}");
+                    writer.WriteLine($"Surname: {data.Surname}");
+                    writer.WriteLine($"First Name: {data.FirstName}");
+                    writer.WriteLine($"Second Name: {data.SecondName}");
+                    writer.WriteLine($"ID Number: {data.IDNumber}");
+                    writer.WriteLine($"Date Of Birth : {data.DateOfBirth}");
+                    writer.WriteLine($"Gender : {data.Gender}");
 
                     //this form 
-                    writer.WriteLine($"Email: {Email}");
-                    writer.WriteLine($"Phone Number: {PhoneNumber}");
-                    writer.WriteLine($"ZipCode: {ZipCode}");
-                    writer.WriteLine($"UserName: {UserName}");
-                    writer.WriteLine($"Password: {Password}");
+                    writer.WriteLine($"Email: {data.Email}");
+                    writer.WriteLine($"Phone Number: {data.PhoneNumber}");
+                    writer.WriteLine($"ZipCode: {data.ZipCode}");
+                    writer.WriteLine($"UserName: {data.UserName}");
+                    writer.WriteLine($"Password: {data.Password}");
 
                     writer.WriteLine();
                 }
@@ -78,11 +72,11 @@ namespace LPDA
                 Boolean EmailIsCorrect = false;
 
                 // The value of "email_text" is assigned to the variable  "Email".
-                Email = email_text.Text;
+                data.Email = email_text.Text;
                 
                 while (EmailIsCorrect!=true)
                 {
-                    if (Email == "")
+                    if (data.Email == "")
                     {
                         email_error_picture.Visible = true;
                         enter_the_correct_email.Visible = false;
@@ -90,7 +84,7 @@ namespace LPDA
                     }
                     else 
                     {
-                        if (Email.Contains("@"))
+                        if (data.Email.Contains("@"))
                         {
                             //If text content has '@'. It is correct.
                             //Focusing on phone_number_tex.
@@ -134,12 +128,12 @@ namespace LPDA
                 Boolean PhoneNumberIsCorrect = false;
 
                 // The value of "phone_number_text" is assigned to the variable  "PhoneNumber".
-                PhoneNumber = phone_number_text.Text;
+                    data.PhoneNumber = phone_number_text.Text;
 
 
                     while (PhoneNumberIsCorrect != true)
                     {
-                        if (PhoneNumber=="")
+                        if (data.PhoneNumber=="")
                         {
                             // phone_number_text is empty....
 
@@ -156,7 +150,7 @@ namespace LPDA
                             // Does the phone number have ten digits?...
                             // And check whether the first digit of the phone number is a zero?,...
                             // and whether all the included characters are numbers....
-                            if (PhoneNumber.Length == 10 && PhoneNumber.All(char.IsDigit) && PhoneNumber[0] == '0')
+                            if (data.PhoneNumber.Length == 10 && data.PhoneNumber.All(char.IsDigit) && data.PhoneNumber[0] == '0')
                             {
 
                                 //Correct phone number...
@@ -199,12 +193,12 @@ namespace LPDA
                 Boolean UserNameIsCorrect = false;
 
                 // The value of "user_name_text" is assigned to the variable  "UserName".
-                UserName = user_name_text.Text;
+                data.UserName = user_name_text.Text;
 
                 // while loop.
                 while (UserNameIsCorrect != true)
                 {
-                    if (UserName == "")
+                    if (data.UserName == "")
                     {
                         //
                         user_name_error_picture.Visible = true;
@@ -235,7 +229,7 @@ namespace LPDA
 
         private void password_text_TextChanged(object sender, EventArgs e)
         {
-            Password = password_text.Text;
+            data.Password = password_text.Text;
         }
 
         private void confirm_password_TextChanged(object sender, EventArgs e)
@@ -251,12 +245,12 @@ namespace LPDA
                 Boolean TempPasswordIsCorrect = false;
 
                 // The value of "user_name_text" is assigned to the variable  "UserName".
-                TempPassword = confirm_password_text.Text;
+               data.TempPassword = confirm_password_text.Text;
 
                 // while loop.
                 while (TempPasswordIsCorrect != true)
                 {
-                    if (TempPassword == "") 
+                    if (data.TempPassword == "") 
                     { 
                         confirm_password_error_picture.Visible = true;
                         confirm_password_correct_picture.Visible = false;
@@ -265,7 +259,7 @@ namespace LPDA
                     }
                     else
                     {
-                        if (TempPassword == Password)
+                        if (data.TempPassword == data.Password)
                         {
                             confirm_password_error_picture.Visible = false;
                             confirm_password_correct_picture.Visible = true;
@@ -303,11 +297,11 @@ namespace LPDA
                 Boolean ZipCodeIsCorrect = false;
 
                 // ...The value of "zip_code_text" is assigned to the variable  "ZipCodeIsCorrect".
-                ZipCode = zip_code_text.Text;
+                data.ZipCode = zip_code_text.Text;
 
                 while (ZipCodeIsCorrect!=true)
                 {
-                    if(ZipCode == "")
+                    if(data.ZipCode == "")
                     {
                         // ..."zip_code_text" text box is empty...
                         zipcode_error_picture.Visible = true;
@@ -321,7 +315,7 @@ namespace LPDA
                     else // ....IF "zip_code_text" text box have some value....
                     {
                         // ....This checks if the maximum is 5 and if all of them are numbers.
-                        if (ZipCode.Length == 5 && ZipCode.All(char.IsDigit))
+                        if (data.ZipCode.Length == 5 && data.ZipCode.All(char.IsDigit))
                         {
                             zipcode_error_picture.Visible = false;
                             zipcode_correct_picture.Visible = true;
@@ -355,13 +349,13 @@ namespace LPDA
                 Boolean PasswordIsCorrect = false;
 
                 // ...The value of "zip_code_text" is assigned to the variable  "ZipCodeIsCorrect".
-                Password = password_text.Text;
+                data.Password = password_text.Text;
 
                 string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
 
                 while (PasswordIsCorrect != true)
                 {
-                    if ( Password == "" )
+                    if ( data.Password == "" )
                     {
                         password_error_picture.Visible = true;
                         enter_the_password.Visible = true;
@@ -372,7 +366,7 @@ namespace LPDA
                     else
                     {
                         // Use Regex.IsMatch to check if the password matches the pattern
-                        if (Password.Length >= 8 && Regex.IsMatch(Password, pattern))
+                        if (data.Password.Length >= 8 && Regex.IsMatch(data.Password, pattern))
                         {
                             password_error_picture.Visible = false;
                             password_correct_picture.Visible = true;
@@ -396,7 +390,7 @@ namespace LPDA
 
         private void back_butten_form_02_Click(object sender, EventArgs e)
         {
-            
+
 
             // Hide the create_account_form
             this.Hide();

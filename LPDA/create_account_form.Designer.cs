@@ -116,6 +116,7 @@
             this.ID_number_text_box.TabIndex = 1;
             this.ID_number_text_box.Text = "123456789v & 123456789123";
             this.ID_number_text_box.Click += new System.EventHandler(this.ID_number_text_box_Click);
+            this.ID_number_text_box.TextChanged += new System.EventHandler(this.ID_number_text_box_TextChanged_1);
             this.ID_number_text_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ID_number_text_box_KeyDown);
             // 
             // dateTimePicker1
@@ -397,7 +398,6 @@
             this.create_account_background_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.create_account_background_picture.TabIndex = 0;
             this.create_account_background_picture.TabStop = false;
-            this.create_account_background_picture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // create_account_form
             // 

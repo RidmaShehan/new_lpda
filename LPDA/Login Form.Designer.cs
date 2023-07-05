@@ -39,7 +39,6 @@
             this.login_form_background_picture = new System.Windows.Forms.PictureBox();
             this.password_correct_picture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.hover_login_botten = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.user_name_correct_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_erroe_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_name_error_picture)).BeginInit();
@@ -177,22 +176,6 @@
             this.label1.Text = "Create Account";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // hover_login_botten
-            // 
-            this.hover_login_botten.BackColor = System.Drawing.SystemColors.Highlight;
-            this.hover_login_botten.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.hover_login_botten.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hover_login_botten.ForeColor = System.Drawing.Color.Snow;
-            this.hover_login_botten.Location = new System.Drawing.Point(340, 617);
-            this.hover_login_botten.Name = "hover_login_botten";
-            this.hover_login_botten.Size = new System.Drawing.Size(382, 47);
-            this.hover_login_botten.TabIndex = 4;
-            this.hover_login_botten.Text = "L O G I N ";
-            this.hover_login_botten.UseVisualStyleBackColor = false;
-            this.hover_login_botten.Visible = false;
-            this.hover_login_botten.Click += new System.EventHandler(this.login_butten_Click);
-            this.hover_login_botten.MouseHover += new System.EventHandler(this.login_butten_MouseHover);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,7 +186,6 @@
             this.Controls.Add(this.user_name_correct_picture);
             this.Controls.Add(this.password_txet_box);
             this.Controls.Add(this.user_name_text_box);
-            this.Controls.Add(this.hover_login_botten);
             this.Controls.Add(this.login_butten);
             this.Controls.Add(this.password_erroe_picture);
             this.Controls.Add(this.user_name_error_picture);
@@ -211,6 +193,8 @@
             this.Controls.Add(this.user_name_error_massege);
             this.Controls.Add(this.login_form_background_picture);
             this.Location = new System.Drawing.Point(500, 500);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -236,7 +220,6 @@
         private System.Windows.Forms.PictureBox user_name_correct_picture;
         private System.Windows.Forms.PictureBox password_correct_picture;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button hover_login_botten;
     }
 }
 
