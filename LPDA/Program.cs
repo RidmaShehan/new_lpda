@@ -16,7 +16,6 @@ namespace LPDA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new dashboard_form());
             Application.Run(new Form1());
         }
     }
