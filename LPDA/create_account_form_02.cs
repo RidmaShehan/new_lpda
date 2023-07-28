@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,12 +18,15 @@ namespace LPDA
     public partial class create_account_form_02 : Form
     {
         private LRegDate data;
+        // Create an instance of the login_form
+        Form1 login_form = new Form1();
 
         // Create an instance of the create_account_form_02
         create_account_form create_account_form = new create_account_form();
         public create_account_form_02(LRegDate data)
         {
             InitializeComponent();
+            this.ActiveControl = email_text; //<----- FOCUS first text box after FORM LOAD.
             this.data = data;
         }
       
@@ -56,9 +60,20 @@ namespace LPDA
                     writer.WriteLine();
                 }
 
+                string insertQuery = "INSERT INTO lawer_data_table (lawer_surname, lawer_first_name, lawer_second_name,lawer_id_number,lawer_gender,lawer_date_of_birth,lawer_phone_number,lawer_zipcode,lawer_email,lawer_user_name,lawer_password) VALUES ('"+ data.Surname + "','"+ data.FirstName + "','"+ data.SecondName + "','"+ data.IDNumber + "','"+ data.Gender + "','"+ data.DateOfBirth + "','"+ data.Email + "','"+ data.PhoneNumber + "','"+ data.ZipCode + "','"+ data.UserName + "','"+ data.Password + "')";
+                SQL.ExecuteQuery(insertQuery);
                 // Display a success message
                 string message = "Registration data saved successfully.";
-                MessageBox.Show(message, "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show(message, "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (result== DialogResult.OK)
+                {
+                    // Hide the create_account_form
+                    this.Hide();
+
+                    // Show the create_account_form_02
+                    login_form.Show();
+                }
 
             }
         }
@@ -286,7 +301,55 @@ namespace LPDA
 
         private void email_text_TextChanged(object sender, EventArgs e)
         {
+           
+                // make boolean variable as "EmailIsCorrect" , for controlling the while loop.
+                Boolean EmailIsCorrect = false;
 
+                // The value of "email_text" is assigned to the variable  "Email".
+                data.Email = email_text.Text;
+
+                
+                    if (data.Email == "")
+                    {
+                        email_error_picture.Visible = true;
+                        enter_the_correct_email.Visible = false;
+                        enter_the_email.Visible = true;
+                    }
+                    else
+                    {
+                        if (data.Email.Contains("@"))
+                        {
+                            //If text content has '@'. It is correct.
+                            //Focusing on phone_number_tex.
+                            email_error_picture.Visible = false;
+                            email_correct_picture.Visible = true;
+                            enter_the_email.Visible = false;
+                            //phone_number_text.Focus();
+                            EmailIsCorrect = true;
+                            
+                        }
+                        else
+                        {
+                            //If text content hasn't '@'. It is incorrect.
+                            EmailIsCorrect = false;
+                            //To receive user input again, the focus is placed on that cell and the contents of the cell are cleared.
+                            email_error_picture.Visible = true;
+                            email_correct_picture.Visible = false;
+                            enter_the_email.Visible = false;
+                            enter_the_correct_email.Visible = true;
+                            //
+                            //email_text.Clear();
+                            email_text.Focus();
+                            
+                        }
+
+                    }
+
+
+
+                
+
+            
         }
 
         private void zip_code_text_KeyDown(object sender, KeyEventArgs e)

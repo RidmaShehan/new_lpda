@@ -29,38 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.CR = new System.Windows.Forms.Button();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menu_tag = new System.Windows.Forms.Label();
-            this.munu_tag_icon_picture = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.home_contener = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.HomeTimer = new System.Windows.Forms.Timer(this.components);
+            this.setings_panel = new System.Windows.Forms.Panel();
+            this.munu_tag_icon_picture = new System.Windows.Forms.PictureBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.event_button = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.userControl11 = new LPDA.UserControl1();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.munu_tag_icon_picture)).BeginInit();
             this.home_contener.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -71,17 +69,9 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.setings_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.munu_tag_icon_picture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CR
-            // 
-            this.CR.Location = new System.Drawing.Point(655, 46);
-            this.CR.Name = "CR";
-            this.CR.Size = new System.Drawing.Size(253, 102);
-            this.CR.TabIndex = 1;
-            this.CR.Text = "c_R";
-            this.CR.UseVisualStyleBackColor = true;
             // 
             // sidebar
             // 
@@ -97,7 +87,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(310, 1033);
             this.sidebar.MinimumSize = new System.Drawing.Size(130, 1033);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(310, 1033);
+            this.sidebar.Size = new System.Drawing.Size(130, 1033);
             this.sidebar.TabIndex = 2;
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
@@ -121,18 +111,6 @@
             this.menu_tag.Size = new System.Drawing.Size(62, 20);
             this.menu_tag.TabIndex = 4;
             this.menu_tag.Text = "MENU";
-            // 
-            // munu_tag_icon_picture
-            // 
-            this.munu_tag_icon_picture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.munu_tag_icon_picture.Image = global::LPDA.Properties.Resources.Artboard_23;
-            this.munu_tag_icon_picture.Location = new System.Drawing.Point(29, 34);
-            this.munu_tag_icon_picture.Name = "munu_tag_icon_picture";
-            this.munu_tag_icon_picture.Size = new System.Drawing.Size(67, 41);
-            this.munu_tag_icon_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.munu_tag_icon_picture.TabIndex = 4;
-            this.munu_tag_icon_picture.TabStop = false;
-            this.munu_tag_icon_picture.Click += new System.EventHandler(this.munu_tag_icon_picture_Click);
             // 
             // panel7
             // 
@@ -167,6 +145,105 @@
             this.panel13.Size = new System.Drawing.Size(357, 49);
             this.panel13.TabIndex = 4;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel12.Controls.Add(this.button9);
+            this.panel12.Location = new System.Drawing.Point(3, 222);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(357, 49);
+            this.panel12.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel9.Controls.Add(this.button5);
+            this.panel9.Location = new System.Drawing.Point(3, 112);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(357, 49);
+            this.panel9.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(357, 103);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel10.Controls.Add(this.button7);
+            this.panel10.Location = new System.Drawing.Point(3, 167);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(357, 49);
+            this.panel10.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(3, 226);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(357, 103);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.event_button);
+            this.panel4.Location = new System.Drawing.Point(3, 335);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(357, 103);
+            this.panel4.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button4);
+            this.panel5.Location = new System.Drawing.Point(3, 444);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(357, 103);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Location = new System.Drawing.Point(3, 553);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(357, 103);
+            this.panel6.TabIndex = 5;
+            // 
+            // SidebarTimer
+            // 
+            this.SidebarTimer.Interval = 10;
+            this.SidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
+            // 
+            // HomeTimer
+            // 
+            this.HomeTimer.Interval = 10;
+            this.HomeTimer.Tick += new System.EventHandler(this.HomeTimer_Tick);
+            // 
+            // setings_panel
+            // 
+            this.setings_panel.Controls.Add(this.userControl11);
+            this.setings_panel.Location = new System.Drawing.Point(133, 3);
+            this.setings_panel.Name = "setings_panel";
+            this.setings_panel.Size = new System.Drawing.Size(1783, 1030);
+            this.setings_panel.TabIndex = 3;
+            this.setings_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.setings_panel_Paint);
+            // 
+            // munu_tag_icon_picture
+            // 
+            this.munu_tag_icon_picture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.munu_tag_icon_picture.Image = global::LPDA.Properties.Resources.Artboard_23;
+            this.munu_tag_icon_picture.Location = new System.Drawing.Point(29, 34);
+            this.munu_tag_icon_picture.Name = "munu_tag_icon_picture";
+            this.munu_tag_icon_picture.Size = new System.Drawing.Size(67, 41);
+            this.munu_tag_icon_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.munu_tag_icon_picture.TabIndex = 4;
+            this.munu_tag_icon_picture.TabStop = false;
+            this.munu_tag_icon_picture.Click += new System.EventHandler(this.munu_tag_icon_picture_Click);
+            // 
             // button10
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,16 +259,7 @@
             this.button10.Text = "           ALL CLIENT";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel12.Controls.Add(this.button9);
-            this.panel12.Location = new System.Drawing.Point(3, 222);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(357, 49);
-            this.panel12.TabIndex = 4;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -208,16 +276,7 @@
             this.button9.Text = "           DAILY UPDATES";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel9.Controls.Add(this.button5);
-            this.panel9.Location = new System.Drawing.Point(3, 112);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(357, 49);
-            this.panel9.TabIndex = 4;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button5
             // 
@@ -234,16 +293,7 @@
             this.button5.Text = "           ADD CLIENT";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(357, 103);
-            this.panel2.TabIndex = 4;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -262,15 +312,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel10.Controls.Add(this.button7);
-            this.panel10.Location = new System.Drawing.Point(3, 167);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(357, 49);
-            this.panel10.TabIndex = 4;
-            // 
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,15 +327,7 @@
             this.button7.Text = "           TASK";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(3, 226);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 103);
-            this.panel3.TabIndex = 4;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -311,40 +344,24 @@
             this.button2.Text = "                 SETTING";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel4
+            // event_button
             // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(3, 335);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(357, 103);
-            this.panel4.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::LPDA.Properties.Resources.Artboard_25_copy_2;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-17, -21);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(385, 133);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "                 EVENTS";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Location = new System.Drawing.Point(3, 444);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(357, 103);
-            this.panel5.TabIndex = 4;
+            this.event_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.event_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.event_button.ForeColor = System.Drawing.Color.White;
+            this.event_button.Image = global::LPDA.Properties.Resources.Artboard_25_copy_2;
+            this.event_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.event_button.Location = new System.Drawing.Point(-17, -21);
+            this.event_button.Name = "event_button";
+            this.event_button.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.event_button.Size = new System.Drawing.Size(385, 133);
+            this.event_button.TabIndex = 3;
+            this.event_button.Text = "                 EVENTS";
+            this.event_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.event_button.UseVisualStyleBackColor = true;
+            this.event_button.Click += new System.EventHandler(this.event_button_Click);
             // 
             // button4
             // 
@@ -361,15 +378,7 @@
             this.button4.Text = "                 ABOUT ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(3, 553);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(357, 103);
-            this.panel6.TabIndex = 5;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -386,51 +395,22 @@
             this.button6.Text = "                 HELP ";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // SidebarTimer
+            // userControl11
             // 
-            this.SidebarTimer.Interval = 10;
-            this.SidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel11.Controls.Add(this.button8);
-            this.panel11.Location = new System.Drawing.Point(943, 878);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(357, 103);
-            this.panel11.TabIndex = 4;
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::LPDA.Properties.Resources.Artboard_251;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-17, -12);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(385, 124);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "                 HOME";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // HomeTimer
-            // 
-            this.HomeTimer.Interval = 10;
-            this.HomeTimer.Tick += new System.EventHandler(this.HomeTimer_Tick);
+            this.userControl11.Location = new System.Drawing.Point(0, 3);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1783, 1030);
+            this.userControl11.TabIndex = 0;
             // 
             // dashboard_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.setings_panel);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.CR);
             this.Name = "dashboard_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dashboard_form";
@@ -438,7 +418,6 @@
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.munu_tag_icon_picture)).EndInit();
             this.home_contener.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -449,14 +428,13 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
+            this.setings_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.munu_tag_icon_picture)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button CR;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -464,7 +442,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button event_button;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;
@@ -476,8 +454,6 @@
         private System.Windows.Forms.Panel home_contener;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel12;
@@ -485,5 +461,7 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Timer HomeTimer;
+        private System.Windows.Forms.Panel setings_panel;
+        private UserControl1 userControl11;
     }
 }

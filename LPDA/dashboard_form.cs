@@ -21,6 +21,7 @@ namespace LPDA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SidebarTimer.Start();
             HomeTimer.Start();
         }
 
@@ -91,6 +92,58 @@ namespace LPDA
                     HomeTimer.Stop();
                 }
             }
+        }
+
+        private void setings_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+            HomeTimer.Start();
+           
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+            HomeTimer.Start();
+           
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+            HomeTimer.Start();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+            HomeTimer.Start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+            
+        }
+
+        private void event_button_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SidebarTimer.Start();
         }
     }
 }

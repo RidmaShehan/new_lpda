@@ -55,6 +55,8 @@
             this.surname_correct_picture = new System.Windows.Forms.PictureBox();
             this.surname_error_picture = new System.Windows.Forms.PictureBox();
             this.create_account_background_picture = new System.Windows.Forms.PictureBox();
+            this.birthday_correct_picture = new System.Windows.Forms.PictureBox();
+            this.gender_correct_picture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.id_correct_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.second_name_correct_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.first_name_correct_picture)).BeginInit();
@@ -66,17 +68,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.surname_correct_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.surname_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.create_account_background_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthday_correct_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gender_correct_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // Surname_txet_box
             // 
             this.Surname_txet_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Surname_txet_box.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Surname_txet_box.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Surname_txet_box.Location = new System.Drawing.Point(314, 348);
             this.Surname_txet_box.Name = "Surname_txet_box";
             this.Surname_txet_box.Size = new System.Drawing.Size(418, 27);
             this.Surname_txet_box.TabIndex = 1;
-            this.Surname_txet_box.Text = "Enter Your Surname ";
             this.Surname_txet_box.Click += new System.EventHandler(this.Surname_txet_box_Click);
             this.Surname_txet_box.TextChanged += new System.EventHandler(this.Surname_txet_box_TextChanged);
             this.Surname_txet_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Surname_txet_box_KeyDown);
@@ -84,37 +87,36 @@
             // first_name_text_box
             // 
             this.first_name_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first_name_text_box.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.first_name_text_box.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.first_name_text_box.Location = new System.Drawing.Point(314, 449);
             this.first_name_text_box.Name = "first_name_text_box";
             this.first_name_text_box.Size = new System.Drawing.Size(418, 27);
             this.first_name_text_box.TabIndex = 1;
-            this.first_name_text_box.Text = "example";
             this.first_name_text_box.Click += new System.EventHandler(this.first_name_text_box_Click);
+            this.first_name_text_box.TextChanged += new System.EventHandler(this.first_name_text_box_TextChanged);
             this.first_name_text_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.first_name_text_box_KeyDown);
             // 
             // second_name_text_box
             // 
             this.second_name_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.second_name_text_box.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.second_name_text_box.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.second_name_text_box.Location = new System.Drawing.Point(314, 551);
             this.second_name_text_box.Name = "second_name_text_box";
             this.second_name_text_box.Size = new System.Drawing.Size(418, 27);
             this.second_name_text_box.TabIndex = 1;
-            this.second_name_text_box.Text = "example";
             this.second_name_text_box.Click += new System.EventHandler(this.second_name_text_box_Click);
+            this.second_name_text_box.TextChanged += new System.EventHandler(this.second_name_text_box_TextChanged);
             this.second_name_text_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.second_name_text_box_KeyDown);
             // 
             // ID_number_text_box
             // 
             this.ID_number_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_number_text_box.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ID_number_text_box.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ID_number_text_box.Location = new System.Drawing.Point(896, 348);
             this.ID_number_text_box.MaxLength = 12;
             this.ID_number_text_box.Name = "ID_number_text_box";
             this.ID_number_text_box.Size = new System.Drawing.Size(418, 27);
             this.ID_number_text_box.TabIndex = 1;
-            this.ID_number_text_box.Text = "123456789v & 123456789123";
             this.ID_number_text_box.Click += new System.EventHandler(this.ID_number_text_box_Click);
             this.ID_number_text_box.TextChanged += new System.EventHandler(this.ID_number_text_box_TextChanged_1);
             this.ID_number_text_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ID_number_text_box_KeyDown);
@@ -126,6 +128,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 7, 6, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePicker1_KeyDown);
             // 
@@ -229,7 +232,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Enter The ID Number";
             this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -242,7 +244,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Enter The Date Of Birth ";
             this.label5.Visible = false;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -263,13 +264,12 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(888, 386);
+            this.label7.Location = new System.Drawing.Point(888, 382);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(205, 18);
             this.label7.TabIndex = 5;
             this.label7.Text = "Enter The Correct ID Number ";
             this.label7.Visible = false;
-            this.label7.Click += new System.EventHandler(this.label4_Click);
             // 
             // id_correct_picture
             // 
@@ -387,7 +387,6 @@
             this.surname_error_picture.TabIndex = 6;
             this.surname_error_picture.TabStop = false;
             this.surname_error_picture.Visible = false;
-            this.surname_error_picture.Click += new System.EventHandler(this.surname_error_picture_Click);
             // 
             // create_account_background_picture
             // 
@@ -399,11 +398,38 @@
             this.create_account_background_picture.TabIndex = 0;
             this.create_account_background_picture.TabStop = false;
             // 
+            // birthday_correct_picture
+            // 
+            this.birthday_correct_picture.Image = global::LPDA.Properties.Resources.ok;
+            this.birthday_correct_picture.Location = new System.Drawing.Point(885, 422);
+            this.birthday_correct_picture.Name = "birthday_correct_picture";
+            this.birthday_correct_picture.Size = new System.Drawing.Size(5, 59);
+            this.birthday_correct_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.birthday_correct_picture.TabIndex = 6;
+            this.birthday_correct_picture.TabStop = false;
+            this.birthday_correct_picture.Visible = false;
+            this.birthday_correct_picture.Click += new System.EventHandler(this.surname_error_picture_Click);
+            // 
+            // gender_correct_picture
+            // 
+            this.gender_correct_picture.Image = global::LPDA.Properties.Resources.ok;
+            this.gender_correct_picture.Location = new System.Drawing.Point(885, 522);
+            this.gender_correct_picture.Name = "gender_correct_picture";
+            this.gender_correct_picture.Size = new System.Drawing.Size(5, 59);
+            this.gender_correct_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gender_correct_picture.TabIndex = 6;
+            this.gender_correct_picture.TabStop = false;
+            this.gender_correct_picture.Visible = false;
+            this.gender_correct_picture.Click += new System.EventHandler(this.surname_error_picture_Click);
+            // 
             // create_account_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1624, 881);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.gender_correct_picture);
+            this.Controls.Add(this.birthday_correct_picture);
             this.Controls.Add(this.id_correct_picture);
             this.Controls.Add(this.second_name_correct_picture);
             this.Controls.Add(this.first_name_correct_picture);
@@ -418,7 +444,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -445,6 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.surname_correct_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.surname_error_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.create_account_background_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthday_correct_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gender_correct_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +506,7 @@
         private System.Windows.Forms.PictureBox second_name_correct_picture;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox id_correct_picture;
+        private System.Windows.Forms.PictureBox birthday_correct_picture;
+        private System.Windows.Forms.PictureBox gender_correct_picture;
     }
 }

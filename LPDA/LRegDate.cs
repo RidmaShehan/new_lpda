@@ -13,7 +13,7 @@ namespace LPDA
         public string FirstName;
         public string SecondName;
         public string IDNumber;
-        public string DateOfBirth;
+        public DateTime DateOfBirth;
         public string Gender = "Male";
         public string Email;
         public string PhoneNumber;
