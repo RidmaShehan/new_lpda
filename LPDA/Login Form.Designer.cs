@@ -197,7 +197,8 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.user_name_correct_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_erroe_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_name_error_picture)).EndInit();

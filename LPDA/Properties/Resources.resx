@@ -142,14 +142,14 @@
   <data name="Artboard 211" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Artboard 211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Artboard 25 copy 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Artboard 25 copy 31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Artboard 251" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Artboard 251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Artboard 25 copy 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Artboard 25 copy 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="law login form1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\law login form1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Artboard 25 copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Artboard 25 copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,19 +160,22 @@
   <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Artboard 25 copy 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Artboard 25 copy 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Artboard 251" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Artboard 251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Artboard 34 copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Artboard 34 copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Artboard 212" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Artboard 212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Artboard 25 copy 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Artboard 25 copy 31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="law login form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\law login form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Artboard 212" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Artboard 212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Artboard 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Artboard 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

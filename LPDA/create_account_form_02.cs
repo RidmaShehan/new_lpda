@@ -32,6 +32,7 @@ namespace LPDA
       
         private void next_butten_form_02_Click(object sender, EventArgs e)
         {
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "reg(*.txt)|*.txt";
             saveFileDialog.Title = "save Registration Data";
@@ -60,7 +61,7 @@ namespace LPDA
                     writer.WriteLine();
                 }
 
-                string insertQuery = "INSERT INTO lawer_data_table (lawer_surname, lawer_first_name, lawer_second_name,lawer_id_number,lawer_gender,lawer_date_of_birth,lawer_phone_number,lawer_zipcode,lawer_email,lawer_user_name,lawer_password) VALUES ('"+ data.Surname + "','"+ data.FirstName + "','"+ data.SecondName + "','"+ data.IDNumber + "','"+ data.Gender + "','"+ data.DateOfBirth + "','"+ data.Email + "','"+ data.PhoneNumber + "','"+ data.ZipCode + "','"+ data.UserName + "','"+ data.Password + "')";
+                string insertQuery = "INSERT INTO lawer_data_table (lawer_surname, lawer_first_name, lawer_second_name,lawer_id_number,lawer_gender,lawer_date_of_birth,lawer_phone_number,lawer_zipcode,lawer_email,lawer_user_name,lawer_password) VALUES ('"+ data.Surname + "','"+ data.FirstName + "','"+ data.SecondName + "','"+ data.IDNumber + "','"+ data.Gender + "','"+ data.DateOfBirth + "','"+ data.PhoneNumber + "','"+ data.ZipCode + "','"+ data.Email + "','"+ data.UserName + "','"+ data.Password + "')";
                 SQL.ExecuteQuery(insertQuery);
                 // Display a success message
                 string message = "Registration data saved successfully.";

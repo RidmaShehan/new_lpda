@@ -57,6 +57,7 @@
             this.enter_the_correct_zipcode = new System.Windows.Forms.Label();
             this.enter_the_user_name = new System.Windows.Forms.Label();
             this.enter_the_password = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.phone_number_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.email_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zipcode_error_picture)).BeginInit();
@@ -421,11 +422,22 @@
             this.enter_the_password.Text = "Enter The Password Please";
             this.enter_the_password.Visible = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(878, 617);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(184, 20);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Allow teams and condition";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // create_account_form_02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1624, 881);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.enter_the_password);
             this.Controls.Add(this.enter_the_user_name);
             this.Controls.Add(this.enter_the_correct_zipcode);
@@ -506,5 +518,6 @@
         private System.Windows.Forms.Label enter_the_correct_zipcode;
         private System.Windows.Forms.Label enter_the_user_name;
         private System.Windows.Forms.Label enter_the_password;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

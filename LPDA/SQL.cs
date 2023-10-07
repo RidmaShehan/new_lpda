@@ -2,7 +2,7 @@
 
 public static class SQL
 {
-    private static string connectionString = "Data Source=RIDMA_LAPTOP;Initial Catalog=lpda;Integrated Security=True";
+    private static string connectionString = "Data Source=RIDMADELLG5;Initial Catalog=lpda;Integrated Security=True";
 
     public static SqlConnection GetConnection()
     {

@@ -63,6 +63,16 @@ namespace LPDA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Artboard_1 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Artboard_21 {
             get {
                 object obj = ResourceManager.GetObject("Artboard 21", resourceCulture);
