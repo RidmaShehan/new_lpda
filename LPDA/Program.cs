@@ -18,6 +18,7 @@ namespace LPDA
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new dashboard_form());
             Application.Run(new Form1());
+            //Application.Run(new teamsAndCondition_form());
         }
     }
 }

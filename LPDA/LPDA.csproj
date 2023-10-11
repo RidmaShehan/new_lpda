@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="teams&amp;condition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teams&amp;condition.Designer.cs">
+      <DependentUpon>teams&amp;condition.cs</DependentUpon>
+    </Compile>
     <Compile Include="LRegDate.cs" />
     <Compile Include="SQL.cs" />
     <Compile Include="create_account_form.cs">
@@ -59,12 +65,6 @@
     </Compile>
     <Compile Include="create_account_form_02.Designer.cs">
       <DependentUpon>create_account_form_02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="create_account_form_03.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="create_account_form_03.Designer.cs">
-      <DependentUpon>create_account_form_03.cs</DependentUpon>
     </Compile>
     <Compile Include="dashboard_form.cs">
       <SubType>Form</SubType>
@@ -98,11 +98,11 @@
     <EmbeddedResource Include="create_account_form_02.resx">
       <DependentUpon>create_account_form_02.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="create_account_form_03.resx">
-      <DependentUpon>create_account_form_03.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="dashboard_form.resx">
       <DependentUpon>dashboard_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teams&amp;condition.resx">
+      <DependentUpon>teams&amp;condition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Form.resx">
       <DependentUpon>Login Form.cs</DependentUpon>
@@ -195,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Artboard 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\wings logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

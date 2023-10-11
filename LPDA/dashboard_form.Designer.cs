@@ -444,6 +444,7 @@
             // 
             // About_panel
             // 
+            this.About_panel.Controls.Add(this.QA_panel);
             this.About_panel.Controls.Add(this.developer_Team_Panel);
             this.About_panel.Controls.Add(this.developer_team);
             this.About_panel.Controls.Add(this.label8);
@@ -674,7 +675,7 @@
             this.QA_panel.Controls.Add(this.bodyTextBox);
             this.QA_panel.Controls.Add(this.label16);
             this.QA_panel.Controls.Add(this.label15);
-            this.QA_panel.Location = new System.Drawing.Point(132, 2);
+            this.QA_panel.Location = new System.Drawing.Point(70, 260);
             this.QA_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QA_panel.Name = "QA_panel";
             this.QA_panel.Size = new System.Drawing.Size(1773, 811);
@@ -776,8 +777,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1887, 854);
-            this.Controls.Add(this.QA_panel);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.About_panel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

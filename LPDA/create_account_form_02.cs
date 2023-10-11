@@ -23,6 +23,8 @@ namespace LPDA
 
         // Create an instance of the create_account_form_02
         create_account_form create_account_form = new create_account_form();
+
+        teamsAndCondition_form teamsAndCondition_Form = new teamsAndCondition_form();
         public create_account_form_02(LRegDate data)
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace LPDA
       
         private void next_butten_form_02_Click(object sender, EventArgs e)
         {
-            
+
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "reg(*.txt)|*.txt";
             saveFileDialog.Title = "save Registration Data";
@@ -502,6 +504,29 @@ namespace LPDA
         private void phone_number_text_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void create_account_form_02_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                next_butten_form_02.Enabled = true;
+            }
+            else
+            {
+                next_butten_form_02.Enabled=false;
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            teamsAndCondition_Form.Show(); 
         }
     }
 }

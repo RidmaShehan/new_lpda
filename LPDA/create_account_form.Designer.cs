@@ -457,6 +457,7 @@
             this.Controls.Add(this.Surname_txet_box);
             this.Controls.Add(this.create_account_background_picture);
             this.Name = "create_account_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "create_account_form";
             this.Load += new System.EventHandler(this.create_account_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.id_correct_picture)).EndInit();

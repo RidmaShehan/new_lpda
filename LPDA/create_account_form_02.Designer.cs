@@ -58,6 +58,7 @@
             this.enter_the_user_name = new System.Windows.Forms.Label();
             this.enter_the_password = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.phone_number_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.email_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zipcode_error_picture)).BeginInit();
@@ -165,6 +166,7 @@
             // 
             this.next_butten_form_02.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.next_butten_form_02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.next_butten_form_02.Enabled = false;
             this.next_butten_form_02.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.next_butten_form_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.next_butten_form_02.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -425,18 +427,31 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(878, 617);
+            this.checkBox1.Location = new System.Drawing.Point(878, 613);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(184, 20);
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Allow teams and condition";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(905, 612);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Allow teams and condition";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // create_account_form_02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1624, 881);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.enter_the_password);
             this.Controls.Add(this.enter_the_user_name);
@@ -470,6 +485,7 @@
             this.Name = "create_account_form_02";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "create_account_form_02";
+            this.Load += new System.EventHandler(this.create_account_form_02_Load);
             ((System.ComponentModel.ISupportInitialize)(this.phone_number_error_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.email_error_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zipcode_error_picture)).EndInit();
@@ -519,5 +535,6 @@
         private System.Windows.Forms.Label enter_the_user_name;
         private System.Windows.Forms.Label enter_the_password;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

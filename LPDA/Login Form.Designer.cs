@@ -39,11 +39,13 @@
             this.login_form_background_picture = new System.Windows.Forms.PictureBox();
             this.password_correct_picture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.user_name_correct_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_erroe_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_name_error_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_form_background_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_correct_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // user_name_error_massege
@@ -176,11 +178,23 @@
             this.label1.Text = "Create Account";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::LPDA.Properties.Resources.Artboard_25;
+            this.pictureBox1.Location = new System.Drawing.Point(1565, 826);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1624, 881);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_correct_picture);
             this.Controls.Add(this.user_name_correct_picture);
@@ -204,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.user_name_error_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_form_background_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_correct_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +236,7 @@
         private System.Windows.Forms.PictureBox user_name_correct_picture;
         private System.Windows.Forms.PictureBox password_correct_picture;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
