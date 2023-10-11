@@ -43,6 +43,10 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Full_Name_text = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.correct_NIC_NO_label = new System.Windows.Forms.Label();
+            this.correct_Full_Name_label = new System.Windows.Forms.Label();
+            this.correct_Date_of_Birth_label = new System.Windows.Forms.Label();
+            this.correct_Age_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +79,7 @@
             this.Full_Name_label.Size = new System.Drawing.Size(187, 18);
             this.Full_Name_label.TabIndex = 6;
             this.Full_Name_label.Text = "Please Enter the Full Name";
+            this.Full_Name_label.Visible = false;
             // 
             // NIC_label
             // 
@@ -86,6 +91,7 @@
             this.NIC_label.Size = new System.Drawing.Size(172, 18);
             this.NIC_label.TabIndex = 7;
             this.NIC_label.Text = "Please Enter the NIC NO";
+            this.NIC_label.Visible = false;
             // 
             // Date_of_birth_label
             // 
@@ -97,6 +103,8 @@
             this.Date_of_birth_label.Size = new System.Drawing.Size(202, 18);
             this.Date_of_birth_label.TabIndex = 8;
             this.Date_of_birth_label.Text = "Please Enter the Date of Birth";
+            this.Date_of_birth_label.Visible = false;
+            this.Date_of_birth_label.Click += new System.EventHandler(this.Date_of_birth_label_Click);
             // 
             // Age_label
             // 
@@ -108,6 +116,7 @@
             this.Age_label.Size = new System.Drawing.Size(145, 18);
             this.Age_label.TabIndex = 9;
             this.Age_label.Text = "Please Enter the Age";
+            this.Age_label.Visible = false;
             // 
             // Gender_label
             // 
@@ -119,6 +128,8 @@
             this.Gender_label.Size = new System.Drawing.Size(169, 18);
             this.Gender_label.TabIndex = 10;
             this.Gender_label.Text = "Please Enter the Gender";
+            this.Gender_label.Visible = false;
+            this.Gender_label.Click += new System.EventHandler(this.Gender_label_Click);
             // 
             // Male_radio
             // 
@@ -191,6 +202,7 @@
             this.Full_Name_text.Name = "Full_Name_text";
             this.Full_Name_text.Size = new System.Drawing.Size(433, 24);
             this.Full_Name_text.TabIndex = 17;
+            this.Full_Name_text.TextChanged += new System.EventHandler(this.Full_Name_text_TextChanged);
             this.Full_Name_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Full_Name_text_KeyDown_1);
             // 
             // pictureBox1
@@ -202,12 +214,65 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // correct_NIC_NO_label
+            // 
+            this.correct_NIC_NO_label.AutoSize = true;
+            this.correct_NIC_NO_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correct_NIC_NO_label.ForeColor = System.Drawing.Color.Red;
+            this.correct_NIC_NO_label.Location = new System.Drawing.Point(282, 454);
+            this.correct_NIC_NO_label.Name = "correct_NIC_NO_label";
+            this.correct_NIC_NO_label.Size = new System.Drawing.Size(178, 18);
+            this.correct_NIC_NO_label.TabIndex = 18;
+            this.correct_NIC_NO_label.Text = "Enter the  correct NIC NO";
+            this.correct_NIC_NO_label.Visible = false;
+            // 
+            // correct_Full_Name_label
+            // 
+            this.correct_Full_Name_label.AutoSize = true;
+            this.correct_Full_Name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correct_Full_Name_label.ForeColor = System.Drawing.Color.Red;
+            this.correct_Full_Name_label.Location = new System.Drawing.Point(282, 355);
+            this.correct_Full_Name_label.Name = "correct_Full_Name_label";
+            this.correct_Full_Name_label.Size = new System.Drawing.Size(189, 18);
+            this.correct_Full_Name_label.TabIndex = 19;
+            this.correct_Full_Name_label.Text = "Enter the correct Full Name";
+            this.correct_Full_Name_label.Visible = false;
+            // 
+            // correct_Date_of_Birth_label
+            // 
+            this.correct_Date_of_Birth_label.AutoSize = true;
+            this.correct_Date_of_Birth_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correct_Date_of_Birth_label.ForeColor = System.Drawing.Color.Red;
+            this.correct_Date_of_Birth_label.Location = new System.Drawing.Point(279, 553);
+            this.correct_Date_of_Birth_label.Name = "correct_Date_of_Birth_label";
+            this.correct_Date_of_Birth_label.Size = new System.Drawing.Size(204, 18);
+            this.correct_Date_of_Birth_label.TabIndex = 20;
+            this.correct_Date_of_Birth_label.Text = "Enter the correct Date of Birth";
+            this.correct_Date_of_Birth_label.Visible = false;
+            // 
+            // correct_Age_label
+            // 
+            this.correct_Age_label.AutoSize = true;
+            this.correct_Age_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correct_Age_label.ForeColor = System.Drawing.Color.Red;
+            this.correct_Age_label.Location = new System.Drawing.Point(839, 355);
+            this.correct_Age_label.Name = "correct_Age_label";
+            this.correct_Age_label.Size = new System.Drawing.Size(147, 18);
+            this.correct_Age_label.TabIndex = 21;
+            this.correct_Age_label.Text = "Enter the correct Age";
+            this.correct_Age_label.Visible = false;
             // 
             // peronal_detail_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1624, 826);
+            this.Controls.Add(this.correct_Age_label);
+            this.Controls.Add(this.correct_Date_of_Birth_label);
+            this.Controls.Add(this.correct_Full_Name_label);
+            this.Controls.Add(this.correct_NIC_NO_label);
             this.Controls.Add(this.Full_Name_text);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.Next_button);
@@ -248,5 +313,9 @@
         private System.Windows.Forms.Button Next_button;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.TextBox Full_Name_text;
+        private System.Windows.Forms.Label correct_NIC_NO_label;
+        private System.Windows.Forms.Label correct_Full_Name_label;
+        private System.Windows.Forms.Label correct_Date_of_Birth_label;
+        private System.Windows.Forms.Label correct_Age_label;
     }
 }

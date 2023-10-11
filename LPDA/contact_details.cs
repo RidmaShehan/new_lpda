@@ -62,8 +62,9 @@ namespace LPDA
                     {
                         // phone_number_text is empty...
                         Contact_personal_label.Visible=true;
+                        Correct_personal_contact_lable.Visible = false;
                         Contact_personal_text.Focus();
-                        ContactPersonalIsCorrect = true;
+                        ContactPersonalIsCorrect = false;
                         break;
                     }
                     else
@@ -74,8 +75,9 @@ namespace LPDA
                         if (ContactPersonal.Length == 10 && ContactPersonal.All(char.IsDigit) && ContactPersonal[0] == '0')
                         {
 
-                            //Correct phone number...
+                            //Correct phone number..
                             Contact_personal_label.Visible = false;
+                            Correct_personal_contact_lable.Visible= false;
                             Contact_Home_text.Focus();
                             ContactPersonalIsCorrect=true;
                             break;
@@ -83,7 +85,8 @@ namespace LPDA
                         else
                         {
                             //Incorrect phone number...
-                            Contact_personal_label.Visible= true;
+                            Contact_personal_label.Visible = false;
+                            Correct_personal_contact_lable.Visible= true;
                             Contact_personal_text.Focus();
                             Contact_personal_text.Clear();
                             ContactPersonalIsCorrect=false;
@@ -112,6 +115,7 @@ namespace LPDA
                     {
                         // phone_number_text is empty...
                         Contact_Home_label.Visible=true;
+                        correct_home_contact_lable.Visible = false;
                         Contact_Home_text.Focus();
                         ContactHomeIsCorrect  = true;
                         break;
@@ -123,6 +127,7 @@ namespace LPDA
 
                             //Correct phone number...
                             Contact_Home_label.Visible = false;
+                            correct_home_contact_lable.Visible=false;
                             Email_text.Focus();
                             ContactHomeIsCorrect =true;
                             break;
@@ -130,7 +135,8 @@ namespace LPDA
                         else
                         {
                             //Incorrect phone number...
-                            Contact_Home_label.Visible= true;
+                            Contact_Home_label.Visible= false;
+                            correct_home_contact_lable.Visible=true;
                             Contact_Home_text.Focus();
                             Contact_Home_text.Clear();
                             ContactHomeIsCorrect=false;
@@ -157,26 +163,34 @@ namespace LPDA
                 {
                     if (Email=="")
                     {
-                        Email_label.Visible=true;
+                        Enter_Email_label.Visible=true;
+                        correct_Email_label.Visible = false;
                         Email_text.Focus();
-                        EmailIsCorrect = true;
+                        EmailIsCorrect = false;
                         break;
                     }
                     else
                     {
+                        // IS e-mail contain has a "@" and e-maikl length is greater then ONE CHARECTER  ?
                         if (Email.Length>1 && Email.Contains("@"))
+                            // e-mail is CORRECT.
                         {
-                            Email_label.Visible=false;
+                            Enter_Email_label.Visible=false;
+                            correct_Email_label.Visible = false;
                             Address_text.Focus();
                             EmailIsCorrect=true;
                             break;
                         }
                         else
                         {
-                            Email_label.Visible=true;
+                            // e-mail is  INCORRECT.
+
+                            // UI LABLE visible truse or false.
+                            Enter_Email_label.Visible=false;
+                            correct_Email_label.Visible = true;
                             Email_text.Focus();
                             Email_text.Clear();
-                            EmailIsCorrect=true;
+                            EmailIsCorrect=false;
                             break;
 
                         }
@@ -205,7 +219,7 @@ namespace LPDA
                     {
                         Address_label.Visible=true;
                         Address_text.Focus();
-                        AddressIsCorrect = true;
+                        AddressIsCorrect = false;
                         break;
                     }
                     else
@@ -234,6 +248,7 @@ namespace LPDA
                 {
                     if (City=="")
                     {
+                        // IS city label is EMPTY.
                         City_label.Visible=true;
                         City_text.Focus();
                         CityIsCorrect = false;
@@ -241,6 +256,9 @@ namespace LPDA
                     }
                     else
                     {
+                        // This IF is not suterble , becouse SIR LANKA HAS A YAYA 1, YAYA 2, YAYA 3, ETC... citys.
+                        // IT is not surterble in lanka....
+                        // plz changew this one ....
                         if (City.All(char.IsLetter))
                         {
                             City_label.Visible=false;
@@ -250,10 +268,10 @@ namespace LPDA
                         }
                         else
                         {
-                            City_label.Visible=true;
+                            City_label.Visible=false;
                             City_text.Focus();
                             City_text.Clear();
-                            CityIsCorrect=true;
+                            CityIsCorrect=false;
                             break;
                         }
                        
@@ -279,26 +297,34 @@ namespace LPDA
 
                 while (ZipCodeIsCorrect!=true)
                 {
+                    //EMPTY ZIP cord text box..
                     if (ZipCode == "")
                     {
-                        Zip_code_label.Visible = false;
+                        Zip_code_label.Visible = true;
+                        correct_Zip_Code_lable.Visible=false;
                         Zip_code_text.Focus();
                         ZipCodeIsCorrect = false;
                         break;
                     }
                     else 
                     {
-                        
+
+                        // I change the "Zip_code_text" MAXLENGTH EQUAL to FIVE CHARECTERS, 
+
                         if (ZipCode.Length == 5 && ZipCode.All(char.IsDigit))
                         {
                             Zip_code_label.Visible= false;
+                            correct_Zip_Code_lable.Visible=false;
+                            Next__button.Focus();
                             ZipCodeIsCorrect = true;
                             break;
                         }
                         else 
 
                         {
-                            Zip_code_label.Visible = true;
+                            // INCORRECT  ZIP CODE  
+                            Zip_code_label.Visible = false;
+                            correct_Zip_Code_lable.Visible = true;
                             Zip_code_text.Clear();
                             Zip_code_text.Focus();
                             ZipCodeIsCorrect = false;
@@ -307,6 +333,32 @@ namespace LPDA
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Contact_personal_text_TextChanged(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void Address_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void City_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void correct_home_contact_lable_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

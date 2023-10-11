@@ -14,9 +14,9 @@ namespace LPDA
 {
     public partial class peronal_detail_form : Form
     {
-        public String Name;
-        public String NIC;
-        public String Age;
+         String Name;
+         String NIC;
+         String Age;
 
         public peronal_detail_form()
         {
@@ -57,13 +57,14 @@ namespace LPDA
 
         }
 
-        private void Full_Name_text_KeyDown(object sender, KeyEventArgs e)
+      /* private void Full_Name_text_KeyDown(object sender, KeyEventArgs e)
         {
 
-        }
+        }*/
 
         private void Full_Name_text_KeyDown_1(object sender, KeyEventArgs e)
         {
+            
             if (e.KeyCode == Keys.Enter)
             {
                 // make boolean variable as " NameIsCorrect " , for controlling the while loop.
@@ -71,16 +72,17 @@ namespace LPDA
 
                 // The value of "Full_Name_text" is assigned to the variable  "Name".
                 Name = Full_Name_text.Text;
-
+               
                 // while loop.
                 while (NameIsCorrect != true)
                 {
-                    if (Name == "")
+                    
+                    if (Name=="")
                     {
-                        Full_Name_label.Visible = false;
                         Full_Name_label.Visible = true;
+                        correct_Full_Name_label.Visible = false;
                         Full_Name_text.Focus();
-                        NameIsCorrect = true;
+                        NameIsCorrect = false;
                         break;
                     }
                     else
@@ -88,13 +90,15 @@ namespace LPDA
                         if (Name.All(char.IsLetter))
                         {
                             Full_Name_label.Visible=false;
+                            correct_Full_Name_label.Visible=false;
                             NIC_NO_text.Focus();
                             NameIsCorrect=true;
                             break;
                         }
                         else
                         {
-                            Full_Name_label.Visible=true;
+                            Full_Name_label.Visible=false;
+                            correct_Full_Name_label.Visible=true;
                             Full_Name_text.Focus();
                             Full_Name_text.Clear();
                             NameIsCorrect=false;
@@ -124,6 +128,7 @@ namespace LPDA
                     if (NIC =="")
                     {
                         NIC_label.Visible = true;
+                        correct_NIC_NO_label.Visible=false;
                         NIC_NO_text.Focus();
                         NICIsCorrect = false;
                         break;
@@ -133,6 +138,7 @@ namespace LPDA
                         if (NIC.Length == 12 && NIC.All(char.IsDigit))
                         {
                             NIC_label.Visible = false;
+                            correct_NIC_NO_label.Visible=false;
                             dateTimePicker.Focus(); 
                             NICIsCorrect = true;
                             break;
@@ -146,7 +152,8 @@ namespace LPDA
                                     if (!char.IsDigit(NIC[i]))
                                     {
 
-                                        NIC_label.Visible = true;
+                                        NIC_label.Visible = false;
+                                        correct_NIC_NO_label.Visible=true;
                                         NIC_NO_text.Clear();
                                         NIC_NO_text.Focus();
                                         NICIsCorrect = false;
@@ -155,6 +162,7 @@ namespace LPDA
                                     else
                                     {
                                         NIC_label.Visible = false;
+                                        correct_NIC_NO_label.Visible=false;
                                         dateTimePicker.Focus();
                                         NICIsCorrect = true;
                                         break;
@@ -164,7 +172,8 @@ namespace LPDA
                             }
                             else
                             {
-                                NIC_label.Visible = true;
+                                NIC_label.Visible = false;
+                                correct_NIC_NO_label.Visible= true;
                                 dateTimePicker.Focus();
                                 NICIsCorrect = false;
                                 break;
@@ -194,6 +203,7 @@ namespace LPDA
                             if (Age =="")
                             {
                                 Age_label.Visible = true;
+                                correct_Age_label.Visible=false;
                                 Age_text.Focus();
                                 AgeIsCorrect = false;
                                 break;
@@ -203,13 +213,15 @@ namespace LPDA
                                 if (Age.All(char.IsDigit))
                                 {
                                     Age_label.Visible = false;
+                                    correct_Age_label.Visible=false;
                                     Female_radio.Checked = true;
                                     Gender_label.Visible = false;
                                     AgeIsCorrect = true;
                                 }
                                 else
                                 { 
-                                    Age_label.Visible = true;
+                                    Age_label.Visible = false;
+                                    correct_Age_label.Visible=true;
                                     Age_text.Clear();
                                     Age_text.Focus();
                                     AgeIsCorrect = true;
@@ -220,7 +232,27 @@ namespace LPDA
                         }
                     }
                 }
-            }
+
+        private void Full_Name_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Date_of_birth_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gender_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
         }
     
 
