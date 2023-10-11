@@ -64,12 +64,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login Form.Designer.cs">
-      <DependentUpon>Login Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="peronal_detail_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login Form.resx">
-      <DependentUpon>Login Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="peronal_detail_form.resx">
       <DependentUpon>peronal_detail_form.cs</DependentUpon>
