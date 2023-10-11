@@ -1,0 +1,19 @@
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\bin\Debug\net6.0-windows\Law Diary.exe
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\bin\Debug\net6.0-windows\Law Diary.deps.json
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\bin\Debug\net6.0-windows\Law Diary.runtimeconfig.json
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\bin\Debug\net6.0-windows\Law Diary.dll
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\bin\Debug\net6.0-windows\Law Diary.pdb
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.csproj.AssemblyReference.cache
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law_Diary.Form1.resources
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law_Diary.Properties.Resources.resources
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.csproj.GenerateResource.cache
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.AssemblyInfoInputs.cache
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.AssemblyInfo.cs
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.csproj.CoreCompileInputs.cache
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.dll
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\refint\Law Diary.dll
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.pdb
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law Diary.genruntimeconfig.cache
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\ref\Law Diary.dll
+C:\Users\Prabani\Desktop\Law Diary\Law Diary\obj\Debug\net6.0-windows\Law_Diary.Form2.resources
